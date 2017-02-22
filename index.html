@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, max-scale=0.5, min-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -21,6 +21,9 @@
 
     <!-- Theme CSS -->
     <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/gabyr.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,16 +75,14 @@
     <header class="intro">
         <div class="intro-body">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <img src="img/fixhair.png">
-                    </div>
-                </div>
-                <div class="row">
+                <div class="row" style="padding-top: 69px;">
                     <div class="col-md-8 col-md-offset-2">
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="img/fixhair.png" style="width: 90%;">
                     </div>
                 </div>
             </div>
@@ -89,13 +90,12 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container content-section text-center" style="background: url('img/gabyredhair.jpg') top right no-repeat;background-size: contain;">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Gaby</h2>
-                <p>Aqui te pongo información de ti. Obvio!</p>
-                <p>Hasta te pongo links! Tal vez para un <a href="http://http://www.revlon.com/">producto</a> o algo así.</p>
-                <p>No se que mas quieras, solo dime que y te lo pongo aquí.</p>
+                <h2>¿Quien es Gabriela Riveron?</h2>
+                <p>Gabriela Riveron cuenta con mas de 15 años de experiencia y un grado superior en la carrera de peluqueria y estilismo. Su preparación comenzo en la Ciudad de Mexico en la cual ella recibió el título de <strong>Maestra en la Docencia </strong> en el Instituto Superior de Estilistas. Continuo en diferentes ciudades de USA tales como Nueva York y Chicago entre otras. Es tambien, colorimetrista certificada de Redken y cuenta con un sin fin de cursos de prestigiosas marcas como Loreal.</p>
+                <p>El objetivo principal es <strong style="font-size: 1.2em; font-style: oblique;">cuidar tu cabello </strong>y contribuir a tu seguridad personal. Te da un trato personalizado para asi ofrecer la mejor de las tecnicas y con un excelente resultado.</p>
             </div>
         </div>
     </section>
@@ -106,55 +106,127 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- Content Row -->
-                    <div class="row" style="color: black; font-size: 1.4em">
+                    <div class="row" style="font-size: 1.4em">
                         <div class="col-lg-12">
-                            <h2 class="page-header">Services</h2>
+                            <h1 class="page-header">Services</h1>
                         </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-default text-center">
+                    </div>
+                    <div class="row" style="color:black;">
+                        <div class="col-lg-6">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Basic</h3>
+                                    <h1 class="panel-title">Haircut</h1>
                                 </div>
                                 <div class="panel-body">
-                                    <span class="price"><sup>$</sup>29<sup>99</sup></span>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Women</td>
+                                                    <td>Men</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>$28</td>
+                                                    <td>$15</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><strong>1</strong> Haircut</li>
-                                    <li class="list-group-item"><strong>1</strong> Wash &amp; Rinse</li>
-                                    <li class="list-group-item"><strong>FREE</strong> Estimate!</li>
-                                </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-default text-center">
+                        <div class="col-lg-6">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Plus</h3>
+                                    <h1 class="panel-title">Color</h1>
                                 </div>
                                 <div class="panel-body">
-                                    <span class="price"><sup>$</sup>49<sup>99</sup></span>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>All Over Color</td>
+                                                    <td>Roots</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>$50 &amp; up</td>
+                                                    <td>$40 &amp; up</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><strong>2</strong> Haircuts</li>
-                                    <li class="list-group-item"><strong>1</strong> Hair Dying</li>
-                                    <li class="list-group-item"><strong>2</strong> Wash &amp; Rinse</li>
-                                    <li class="list-group-item"><strong>FREE</strong> Estimate!</li>
-                                </ul>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-primary text-center">
+                        <div class="col-lg-6">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Ultra <span class="label label-success">Best Value</span></h3>
+                                    <h1 class="panel-title">Highlights</h1>
                                 </div>
                                 <div class="panel-body">
-                                    <span class="price"><sup>$</sup>59<sup>99</sup></span>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Dimensional Color</td>
+                                                    <td>Full</td>
+                                                    <td>Partial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>$100 &amp; up</td>
+                                                    <td>$70 &amp; up</td>
+                                                    <td>$50 &amp; up</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><strong>3</strong> Haircuts</li>
-                                    <li class="list-group-item"><strong>3</strong> Hair Dying</li>
-                                    <li class="list-group-item"><strong>3</strong> Wash &amp; Rinse</li>
-                                    <li class="list-group-item"><strong>FREE</strong> Estimate!</li>
-                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h1 class="panel-title">Color Correction</h1>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>By consultation only</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h1 class="panel-title">Style</h1>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Blow Dry</td>
+                                                    <td>Iron Finish</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>$25 &amp; up</td>
+                                                    <td>$30 &amp; up</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="alert alert-warning">
+                                <strong>NOTE: </strong>Prices are shown for short and thin hair. All services include shampoo and express dry.
                             </div>
                         </div>
                     </div>
@@ -168,7 +240,12 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Gaby</h2>
+                <!-- Content Row -->
+                <div class="row" style="font-size: 1.4em">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Contact</h1>
+                    </div>
+                </div>
                 <p>Feel free to email me with any questions or comments.</p>
                 <p><a href="mailto:gabyriveron75@gmail.com"><i class="fa fa-envelope-square fa-4x" aria-hidden="true"></i></a>
                 </p>
@@ -186,12 +263,132 @@
                 </ul>
             </div>
         </div>
+
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1 class="page-header">Make an Appointment</h1>
+            </div>
+        </div>
+        <form role="form">
+            <div class="row">
+                <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
+                    <h4>Full Name: </h4>
+                </div>
+                <div class="col-md-5">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Enter text">
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
+                    <h4>Service: </h4>
+                </div>
+                <div class="col-md-5" style="text-align: left;">
+                    <div class="form-group">
+                        <label>Haircut:</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1">Woman
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">Man
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3" checked>None
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Color:</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="RadiosInline" id="RadiosInline1" value="option1">All Over Color
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="RadiosInline" id="RadiosInline2" value="option2">Roots
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="RadiosInline" id="RadiosInline3" value="option3" checked>None
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Highlights:</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radiosline" id="Radiosline1" value="option1">Dimensional Color
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radiosline" id="Radiosline2" value="option2">Full
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radiosline" id="Radiosline3" value="option3" checked>Partial
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radiosline" id="Radiosline4" value="option4" checked>None
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Color Correction:  &nbsp;</label>
+                        <input type="checkbox" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Style:</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radios" id="Radios1" value="option1">Blow Dry
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radios" id="Radios2" value="option2">Iron Finish
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="Radios" id="Radios3" value="option3" checked>None
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
+                    <h4>Phone: </h4>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></span>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+                        <input type="text"  id="textbox" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
+                    <h4>Email: </h4>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i></span>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
+                    <h4>Date: </h4>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
+                        <input type="datetime" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <button type="submit" class="btn btn-lg btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
     </section>
 
     <!-- Map Section -->
     <div class="row">
         <iframe
-            frameborder="0" style="width: 100%;height: 490px;border:0;padding-left: 10%;padding-right: 10%;"
+            frameborder="0" style="width: 100%;height: 490px;border:0;padding-left: 10%;padding-right: 10%; padding-top: 100px;"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJmcCfXtsjWunFeUCxV0E8p_e_wzzX-1Y&q=place_id:ChIJQS6nYvHXQIYR2yCRxl0yrnA" allowfullscreen>
         </iframe>
     </div>
