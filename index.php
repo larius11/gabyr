@@ -1,8 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -95,7 +92,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Who is Gabriela Riveron?</h2>
                 <p>Gabriela Riveron has more than 15 years of experience and a higher degree in the career of hairdressing and styling. Her preparation began in Mexico City in which she received the title of <strong>Master of Teaching </strong>at the Higher Institute of Stylists. She continued her work in different US cities such as New York and Chicago among others. Gabriela is also a Certified Colorimetrist of Redken and has an endless number of prestigious courses from brands such as Loreal.</p>
-                <p>The main objective is to <strong style="font-size: 1.2em; font-style: oblique;">take care of your hair </strong>and contribute to your personal safety. It gives you a personalized treatment to offer the best of the techniques and with an excellent result.</p>
+                <p>The main objective is to <strong style="font-size: 1.2em; font-style: oblique;">take care of your hair </strong>and contribute to your self-esteem. She gives you a personalized treatment to offer the best of the techniques and with excellent results.</p>
             </div>
         </div>
     </section>
@@ -269,14 +266,17 @@
                 <h1 class="page-header">Make an Appointment</h1>
             </div>
         </div>
-        <form role="form">
+        <form method="post" name="sentMessage" id="contactForm" action="bin/script_mail.php" novalidate>
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Full Name: </h4>
                 </div>
                 <div class="col-md-5">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter text">
+                        <div class="control-group form-group">
+                        <div class="controls">
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
                         </div>
                 </div>
             </div>
@@ -349,9 +349,11 @@
                 <div class="col-md-5">
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></span>
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
-                        <input type="text"  id="textbox" class="form-control">
+                    <div class="control-group form-group">
+                        <div class="controls">
+                        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -362,7 +364,11 @@
                 <div class="col-md-5">
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i></span>
-                        <input type="email" class="form-control">
+                        <div class="control-group form-group">
+                        <div class="controls">
+                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -373,13 +379,13 @@
                 <div class="col-md-5">
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
-                        <input type="datetime-local" step="1800" class="form-control">
+                        <input type="datetime-local" step="1800" class="form-control" id="date">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <button type="submit" class="btn btn-lg btn-default">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-default">Send Message</button>
                 </div>
             </div>
         </form>
@@ -412,6 +418,11 @@
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
 </body>
 
