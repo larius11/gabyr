@@ -117,7 +117,7 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover">
-                                            <tbody>
+                                            <tbody style="color: black;">
                                                 <tr>
                                                     <td>Women</td>
                                                     <td>Men</td>
@@ -140,7 +140,7 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover">
-                                            <tbody>
+                                            <tbody style="color: black;">
                                                 <tr>
                                                     <td>All Over Color</td>
                                                     <td>Roots</td>
@@ -163,7 +163,7 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover">
-                                            <tbody>
+                                            <tbody style="color: black;">
                                                 <tr>
                                                     <td>Dimensional Color</td>
                                                     <td>Full</td>
@@ -188,7 +188,7 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover">
-                                            <tbody>
+                                            <tbody style="color: black;">
                                                 <tr>
                                                     <td>By consultation only</td>
                                                 </tr>
@@ -206,7 +206,7 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover">
-                                            <tbody>
+                                            <tbody style="color: black;">
                                                 <tr>
                                                     <td>Blow Dry</td>
                                                     <td>Iron Finish</td>
@@ -348,7 +348,6 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></span>
                     <div class="control-group form-group">
                         <div class="controls">
                         <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
@@ -363,7 +362,6 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i></span>
                         <div class="control-group form-group">
                         <div class="controls">
                         <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
