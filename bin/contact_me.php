@@ -6,7 +6,7 @@ if(empty($_POST['name'])  		||
    empty($_POST['date'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
-	echo "No arguments Provided!";
+	echo "Not enough correct arguments provided!";
 	return false;
    }
 	
@@ -16,7 +16,7 @@ $email_address = $_POST['email'];
 $date = $_POST['date'];
 	
 // create email body and send it	
-$to = "gabyriveron75@gmail.com"; // PUT YOUR EMAIL ADDRESS HERE
+$to = "seriumone@gmail.com"; // PUT YOUR EMAIL ADDRESS HERE
 $email_subject = "Appointment Request:  $name"; // EDIT THE EMAIL SUBJECT LINE HERE
 $email_body = "Here are the details:\n\nName: $name\n\nPhone: $phone\n\nEmail: $email_address\n\nDate:\n$date";
 $headers = "From: ricardoriveron.com\n";

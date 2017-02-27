@@ -10,6 +10,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -21,6 +22,12 @@
 
     <!-- Custom CSS -->
     <link href="css/gabyr.css" rel="stylesheet">
+
+    <!-- Form Validation -->
+    <script src="js/gabyr.js"></script>
+
+    <!-- Time Picker -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -235,6 +242,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
+        <!-- Original Contact Section -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- Content Row -->
@@ -260,26 +268,27 @@
                 </ul>
             </div>
         </div>
+        <!-- /Original Contact Section -->
 
+        <!-- Page Header -->
         <div class="row" style="padding-top: 20px;">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1 class="page-header">Make an Appointment</h1>
             </div>
         </div>
-        <form method="post" name="sentMessage" id="contactForm" action="bin/script_mail.php" novalidate>
+        <!-- Form to send e-mail begins -->
+        <form name="emailForm" action="bin/contact.php" onsubmit="return validateForm()" method="post">
+            <!-- Name -->
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Full Name: </h4>
                 </div>
                 <div class="col-md-5">
-                        <div class="control-group form-group">
-                        <div class="controls">
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
-                        </div>
-                        </div>
+                    <input type="text" class="form-control" name="fname">
+                    <p style="color: red;" id="nameFix"></p>
                 </div>
             </div>
+            <!-- Service -->
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Service: </h4>
@@ -288,106 +297,109 @@
                     <div class="form-group">
                         <label>Haircut:</label>
                         <label class="radio-inline">
-                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1">Woman
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="1" onclick="serviceRequest()">Woman
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">Man
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="2" onclick="serviceRequest()">Man
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3" checked>None
+                            <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="3" checked onclick="serviceRequest()">None
                         </label>
                     </div>
                     <div class="form-group">
                         <label>Color:</label>
                         <label class="radio-inline">
-                            <input type="radio" name="RadiosInline" id="RadiosInline1" value="option1">All Over Color
+                            <input type="radio" name="RadiosInline" id="RadiosInline1" value="1" onclick="serviceRequest()">All Over Color
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="RadiosInline" id="RadiosInline2" value="option2">Roots
+                            <input type="radio" name="RadiosInline" id="RadiosInline2" value="2" onclick="serviceRequest()">Roots
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="RadiosInline" id="RadiosInline3" value="option3" checked>None
+                            <input type="radio" name="RadiosInline" id="RadiosInline3" value="3" checked onclick="serviceRequest()">None
                         </label>
                     </div>
                     <div class="form-group">
                         <label>Highlights:</label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radiosline" id="Radiosline1" value="option1">Dimensional Color
+                            <input type="radio" name="Radiosline" id="Radiosline1" value="1" onclick="serviceRequest()">Dimensional Color
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radiosline" id="Radiosline2" value="option2">Full
+                            <input type="radio" name="Radiosline" id="Radiosline2" value="2" onclick="serviceRequest()">Full
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radiosline" id="Radiosline3" value="option3" checked>Partial
+                            <input type="radio" name="Radiosline" id="Radiosline3" value="3" checked onclick="serviceRequest()">Partial
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radiosline" id="Radiosline4" value="option4" checked>None
+                            <input type="radio" name="Radiosline" id="Radiosline4" value="4" checked onclick="serviceRequest()">None
                         </label>
                     </div>
                     <div class="form-group">
                         <label>Color Correction:  &nbsp;</label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" name="correct" value="on" onclick="serviceRequest()">
                     </div>
                     <div class="form-group">
                         <label>Style:</label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radios" id="Radios1" value="option1">Blow Dry
+                            <input type="radio" name="Radios" id="Radios1" value="1" onclick="serviceRequest()">Blow Dry
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radios" id="Radios2" value="option2">Iron Finish
+                            <input type="radio" name="Radios" id="Radios2" value="2" onclick="serviceRequest()">Iron Finish
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="Radios" id="Radios3" value="option3" checked>None
+                            <input type="radio" name="Radios" id="Radios3" value="3" checked onclick="serviceRequest()">None
                         </label>
                     </div>
                 </div>
+                <div class="col-md-8 col-md-offset-2">
+                        <h4 id="serving"></h4>
+                </div>
             </div>
+            <!-- Phone -->
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Phone: </h4>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group input-group">
-                    <div class="control-group form-group">
-                        <div class="controls">
-                        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
+                        <span class="input-group-addon"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
+                        <input class="form-control" name="phone">
                     </div>
-                    </div>
+                    <p style="color: red;" id="demo"></p>
                 </div>
             </div>
+            <!-- Email -->
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Email: </h4>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group input-group">
-                        <div class="control-group form-group">
-                        <div class="controls">
-                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                        </div>
-                        </div>
+                        <span class="input-group-addon"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></span>
+                        <input type="email" class="form-control" name="email" onselect="emailValidation()">
                     </div>
+                    <p style="color: red;" id="emailFix"> </p>
                 </div>
             </div>
+            <!-- Date -->
             <div class="row">
                 <div class="col-md-3 col-lg-offset-2" style="text-align: left;">
                     <h4>Date: </h4>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
-                        <input type="datetime-local" step="1800" class="form-control" id="date">
+                        <input type="text" class="form-control" name="date" id="datetimepicker">
                     </div>
                 </div>
             </div>
+            <!-- Submit -->
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <button type="submit" class="btn btn-lg btn-default">Send Message</button>
+                    <button type="submit" class="btn btn-lg btn-default" value="Submit">Send Message</button>
                 </div>
             </div>
         </form>
     </section>
+    <!-- /Contact Section -->
 
     <!-- Map Section -->
     <div class="row">
@@ -406,8 +418,10 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -417,10 +431,24 @@
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!-- Time Picker -->
+    <script src="js/jquery.datetimepicker.full.js"></script>
+    <script>
+        $("#datetimepicker").datetimepicker({
+            format:'d.m.Y H:i',
+            value:'-1970/01/01',
+            minDate: '-1970/01/01',
+            inline:true,
+            lang:'en',
+            allowTimes:[
+            '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', 
+            '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', 
+            '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', 
+            '19:00', '19:30', '20:00', '20:30', '21:00', '21:30',
+            '22:00', '22:30' 
+            ]
+        });
+    </script>
 
 </body>
 
